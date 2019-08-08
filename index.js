@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 1000;
 const db = require('./queries.js');
 
 app.use(bodyParser.json());
@@ -20,9 +20,9 @@ app.listen(port, () => {
 })
 
 app.get('/sensors', db.getAllSensorData);
-app.get('/sensors/sensor_id', db.getSpecificSensorData);
-app.get('/sensors/:game_id', db.getSensorDatafromSpecificGame);
-app.get('/sensors/:user_id', db.getSensorDataFromSpecificUser);
+app.get('/sensors/sensor/:sensor_id', db.getSpecificSensorData);
+app.get('/sensors/game/:game_id', db.getSensorDatafromSpecificGame);
+app.get('/sensors/user/:user_id', db.getSensorDataFromSpecificUser);
 
 app.post('/sensors', db.createSensorEntry);
 
