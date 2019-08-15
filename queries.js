@@ -7,7 +7,7 @@ const pool = new Pool({
   port: 5432,
 })
 
-const getAllSensorData = (request, response) => {
+const getAllSensorData = (response) => {
   pool.query('SELECT * FROM "Sensors"', (error, results) => {
     if (error) {
       throw error;
