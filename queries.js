@@ -16,7 +16,7 @@ const getAllSensorData = (request, response) => {
 }
 
 const getSpecificSensorData = (request, response) => {
-  const sensor_id = parseInt(request.params.sensor_id);
+  const sensor_id = request.params.sensor_id;
 
   pool.query('SELECT * FROM "Sensors" WHERE "sensor_id" = $1', [sensor_id], (error, results) => {
     if (error) {
