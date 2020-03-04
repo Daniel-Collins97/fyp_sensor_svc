@@ -1,10 +1,9 @@
 const Pool = require('pg').Pool;
 const pool = new Pool({
-  user: 'daniel',
-  host: 'localhost',
+  user: 'postgres',
+  host: '35.228.14.148',
   database: 'finalyearprojectdb',
   password: 'Daniel_joseph1',
-  port: 5432,
 })
 
 const getAllSensorData = (request, response) => {
