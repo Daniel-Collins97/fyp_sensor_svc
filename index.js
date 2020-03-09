@@ -24,7 +24,7 @@ app.get('/sensors/sensor/:sensor_id', db.getSpecificSensorData);
 app.get('/sensors/game/:game_id', db.getSensorDatafromSpecificGame);
 app.get('/sensors/user/:user_id', db.getSensorDataFromSpecificUser);
 
-app.post('/sensors', db.createSensorEntry);
+app.post('/sensors/addSensorEntry/:user_id/:game_id', db.createSensorEntry);
 
 app.put('/sensors/:entry_id', db.updateSensorEntry);
 
