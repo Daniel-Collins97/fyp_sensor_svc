@@ -3,7 +3,6 @@ const pool = new Pool({
   user: 'postgres',
   host: '35.228.14.148',
   database: 'finalyearprojectdb',
-  password: 'Daniel_joseph1',
 })
 
 const getAllSensorData = (request, response) => {
